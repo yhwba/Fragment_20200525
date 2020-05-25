@@ -14,7 +14,7 @@ import androidx.fragment.app.Fragment;
 import kr.co.yhw.fragment_20200525.R;
 import kr.co.yhw.fragment_20200525.databinding.FragmentSecondBinding;
 
-public class SecondFragment extends Fragment {
+public class SecondFragment extends BaseFragment {
 
     FragmentSecondBinding binding;
 
@@ -28,16 +28,22 @@ public class SecondFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        
-        
+        setupEvents();
+        setValues();
+
+    }
+
+    @Override
+    public void setupEvents() {
         binding.secondButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(), "두번째 프래그먼트 토스트", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "두번째 프래그먼트 토스트", Toast.LENGTH_SHORT).show();
             }
         });
     }
-    
 
+    @Override
+    public void setValues() {}
 }
 

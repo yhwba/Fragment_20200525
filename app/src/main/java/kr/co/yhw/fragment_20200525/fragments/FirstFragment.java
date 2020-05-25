@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,7 +14,7 @@ import androidx.fragment.app.Fragment;
 import kr.co.yhw.fragment_20200525.R;
 import kr.co.yhw.fragment_20200525.databinding.FragmentFirstBinding;
 
-public class FirstFragment extends Fragment {
+public class FirstFragment extends BaseFragment {
 
     FragmentFirstBinding binding;
 
@@ -39,6 +40,23 @@ public class FirstFragment extends Fragment {
             }
         });
 
+
+    }
+
+    @Override
+    public void setupEvents() {
+        binding.okBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String input = binding.messageEdt.getText().toString();
+                binding.myTxt.setText(input);
+                Toast.makeText(mContext,"문구변경완료", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    @Override
+    public void setValues() {
 
     }
 }
