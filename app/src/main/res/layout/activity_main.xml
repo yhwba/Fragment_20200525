@@ -5,7 +5,14 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity"
+        android:orientation="vertical">
+
+        <fragment
+            android:tag="첫번째 프래그먼트"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            class="kr.co.yhw.fragment_20200525.fragments.FirstFragment"/>
 
     </LinearLayout>
 </layout>
