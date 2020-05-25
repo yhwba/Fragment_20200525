@@ -13,6 +13,11 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             class="kr.co.yhw.fragment_20200525.fragments.FirstFragment"/>
+        <fragment
+            android:tag="두번째 프래그먼트"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            class="kr.co.yhw.fragment_20200525.fragments.SecondFragment"/>
 
     </LinearLayout>
 </layout>
